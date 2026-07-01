@@ -1,12 +1,14 @@
 [package]
 name = "wasm-bindgen-derive-tests"
-version.workspace = true
-edition.workspace = true
 authors.workspace = true
+edition.workspace = true
 license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+version.workspace = true
 
 [dependencies]
-wasm-bindgen-derive = { path = "../wasm-bindgen-derive" }
+wasm-bindgen-derive = { workspace = true }
 wasm-bindgen = { workspace = true }
 js-sys = { workspace = true }
 

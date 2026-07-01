@@ -1,12 +1,12 @@
 [package]
 name = "wasm-bindgen-derive-macro"
-version.workspace = true
-edition.workspace = true
-authors.workspace = true
-license.workspace = true
 description = "Proc-macro backend for wasm-bindgen-derive"
-repository.workspace = true
 categories = ["no-std", "wasm"]
+license.workspace = true
+edition.workspace = true
+version.workspace = true
+authors.workspace = true
+repository.workspace = true
 rust-version.workspace = true
 
 [lib]
