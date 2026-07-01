@@ -29,6 +29,7 @@ macro_rules! derive_error {
 Note that:
 * this derivation must be be positioned before `#[wasm_bindgen]`;
 * the type must implement [`Clone`].
+* `extern crate alloc` must be declared in scope.
 
 The macro is authored by [**@AlexKorn**](https://github.com/AlexKorn)
 based on the idea of [**@aweinstock314**](https://github.com/aweinstock314).
@@ -88,8 +89,6 @@ pub fn derive_try_from_jsvalue(input: TokenStream) -> TokenStream {
     .parse::<TokenStream2>()
     .unwrap();
 
-    // Note that we use `::wasm_bindgen_derive` here,
-    // because this crate will only ever be imported via it.
     let expanded = quote! {
         impl #name {
             pub fn __get_classname() -> &'static str {
