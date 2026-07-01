@@ -2,10 +2,10 @@
 name = "wasm-bindgen-derive"
 description = "Trait derivation macros for wasm-bindgen"
 categories = ["no-std", "wasm"]
+readme = "../README.md"
 authors.workspace = true
 edition.workspace = true
 license.workspace = true
-readme = "../README.md"
 repository.workspace = true
 rust-version.workspace = true
 version.workspace = true
