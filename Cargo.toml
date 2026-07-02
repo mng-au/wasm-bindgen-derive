@@ -8,17 +8,22 @@ resolver = "2"
 
 [workspace.package]
 version = "0.3.1"
-edition = "2021"
 authors = ["Bogdan Opanchuk <bogdan@opanchuk.net>"]
+categories = ["no-std", "wasm"]
 license = "MIT"
 repository = "https://github.com/fjarri/wasm-bindgen-derive"
-rust-version = "1.96.0"
+edition = "2021"
+rust-version = "1.84.0"
 
 [workspace.dependencies]
 js-sys = "0.3.103"
-proc-macro2 = "1.0"
-quote = "1.0"
-syn = "1.0"
+proc-macro2 = "1"
+quote = "1"
+syn = "2"
+trybuild = "1"
 wasm-bindgen = "=0.2.126"
-wasm-bindgen-derive-macro = { path = "./wasm-bindgen-derive-macro" }
 wasm-bindgen-test = "0.3.76"
+wasm-bindgen-derive = { path = "./wasm-bindgen-derive" }
+# This must point to the local crate between releases,
+# and to crates.io when `wasm-bindgen-derive-macro` is published.
+wasm-bindgen-derive-macro = { path = "./wasm-bindgen-derive-macro", version = "0.4.0" }
